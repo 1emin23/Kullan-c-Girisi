@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Ana Sayfa</a></li>
+                <li><a href="/cart">Sepetim</a></li>
+                <% if(userLoggedIn){ %>
+                    <li><a href="/logout">Çıkış Yap</a></li>
+                    <% }else{ %>
+                        <li><a href="/login">Giriş Yap</a></li>
+                        <li><a href="/register">Kayıt Ol</a></li>
+                        <% } %>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Hoşgeldiniz E-Ticaret Sitemize!</h1>
+            <p>En iyi ürünleri en uygun fiyatlarla sunuyoruz.</p>
+            <a href="/products" class="btn">Alışverişe Başla</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 E-Ticaret Sitesi. Tüm Hakları Saklıdır.</p>
+    </footer>
+</body>
+
+</html>
